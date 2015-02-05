@@ -148,7 +148,8 @@ header{
 	
 	article h4{
 		font: bold 2.5em "Geometria Light";
-		margin: 0;	
+		margin: 0;
+		border-bottom: 1px solid #CCC;	
 	}
 	
 	article p::first-line{
