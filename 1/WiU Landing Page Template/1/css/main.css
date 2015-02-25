@@ -14,7 +14,7 @@ body{
 .container{
 	width: 900px;
 	margin: 0 auto;
-	background-color: lightblue;
+	overflow: auto;
 }
 
 /*---HEADER---*/
@@ -115,4 +115,59 @@ h1{
 	padding: 30px 0;
 	min-height: 600px;
 	color: #FFF;
+}
+
+.content h2{
+	font-family: "Helvetica Neue";
+	font-size: 2em;
+	font-weight: 100;
+	text-transform:uppercase;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #FFF;
+}
+
+.contend h2:first-child{
+	margin-top: 0px;
+}
+
+/*---GALLERY---*/
+.box{
+	width: 295px;
+	height: 295px;
+	overflow: hidden;
+	float: left;
+	margin: 2px;
+}
+
+.box:nth-child(7), .box:nth-child(8){
+	width:445px;
+}
+
+.gallery img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.gallery{
+	overflow: auto;
+}
+
+/*---VIDEO---*/
+iframe{
+	width: 900px!important;
+	height: 506.25px;!important;
+}
+
+/*---CONTACT US---*/
+td:first-child{
+	font-weight: bold;
+}
+
+td{
+	vertical-align: top;
+	width: 200px;
+	padding: 20px 0;
+	margin: 0px;
 }
