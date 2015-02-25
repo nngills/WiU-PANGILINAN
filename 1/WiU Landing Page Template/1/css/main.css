@@ -1,254 +1,118 @@
-/*---Document---*/
-
+/*---FONT---*/
 @font-face{
-	font-family: "Roboto Thin";
-    src: url(Roboto-Thin.ttf);
+	font-family: "Chunkfive";
+	src: url("Chunkfive.otf");
 }
 
-@font-face{
-	font-family: "Geometria Light";
-	src: url(Geometria-Light.otf);
+/*---GENERAL---*/
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
-body {
-	font: .75em "Courier New", Arial, sans-serif;
-	margin: 0px auto;
-	color: #333;
-	padding: 0px;
-}
-
-.ref{
-	clear: both!important;
-	color: #CCC;
-	font-style:italic;
-	font-size: .5em !important;
-}
-
-img {
-	width: 50%;
+.container{
+	width: 900px;
+	margin: 0 auto;
+	background-color: lightblue;
 }
 
 /*---HEADER---*/
-
 header{
-	text-transform:uppercase;
-	font-family: "Roboto Thin";
+	background-color: #000;
+	color: #FFF;
 	width: 100%;
-	text-align: center;	
-	margin-top: 75px;
+	height: 100px;
+	position:absolute;
+	top: 0;
+	z-index: 1;
 }
 
-	h1{
-		font-size: 7em;
-		margin-bottom: 35px;
-	}
-	
+h1{
+	font: 5em Chunkfive;
+	margin: 0;
+	float: left;
+}
+
 	/*---NAV---*/
-	
 	nav{
-		font-size: 2em;
-		padding: 1px 0px;
-		border-top: 1px solid #999;
-		border-bottom: 1px solid #999;		
-	}
-	
-	nav ul{
-		word-spacing: 1.5em;	
+		float: right;
+		margin-left: 50px;	
 	}
 	
 	nav li{
-		display: inline;	
+		display: inline;
+		padding: 25px;
+		float: left;
 	}
 	
-		/*---ANCHOR---*/
-		a:link{
-			text-decoration: none;	
-		}
-		
-		a{
-			color: #666;	
-		}
-		
-		a[title]{
-			text-decoration: overline;	
-		}
+	li a{
+		text-decoration: none;
+		color: #FFF;
+		text-transform: uppercase;	
+	}
 	
-/*---CONTAINER---*/	
+/*---CTA---*/
+.cta{
+	height: 800px;
+}
 
-#container{
-	margin: 0 auto;
-	width: 900px;
-	background-color: white;
+	/*---BG---*/
+	.bg{
+		z-index: 0;
+		position: absolute;
+	}
+	
+	.cta img{
+		width: 100%;
+		transition: opacity 0.5s;
+	}
+	
+	/*---TEXT---*/
+	.cta .text{
+		font-size: 1.2em;
+		text-align: center;
+		position: relative;
+		z-index: 10;
+		color: #FFF;
+		top: 350px;
+		background-color: rgba(0,0,0,0.65);
+		width: 800px;
+		padding: 20px;
+		margin: 0 auto;
+		border-radius: 5px;
+	}
+	
+	/*---BUTTON---*/
+	.cta button{
+		padding: 10px;
+		text-transform: uppercase;
+		font-size: 1em;
+		font-weight: 700;
+		background-color: #FFF;
+		border: none;
+		border-radius: 2px;
+	}
+	
+	button a{
+		text-decoration: none;	
+		color: #000;
+	}
+
+/*---GRADIENT---*/
+.gradient{
+	position: relative;
+	z-index: 10;
+	height: 200px;
+	background: linear-gradient(rgba(255,0,0,0), #000);
 }
 	
-	/*---QUOTE---*/
-	
-	#quote{
-		text-align:center;
-		border-bottom: 1px solid #CCC;
-		padding-bottom: 30px;	
-	}
-	
-	#quote h2{
-		text-transform:uppercase;
-		font: 3.8em "Geometria Light";
-		margin: 30px 0px 20px 0px;	
-	}
-	
-	#quote p{
-		font: 2em "Courier New";
-		color:  #999;	
-		margin: 0;
-	}
-	
-	/*---INTRO---*/
-	
-	#intro{
-		margin-top: 20px;
-		padding-bottom: 25px;
-		overflow:auto;
-	}
-	
-	#intro img{
-		float: left;
-		margin-right: 1.1111111%;
-		margin-bottom: 15px;	
-	}
-	
-	#intro p{
-		clear: right;
-		font-size: 1.2em;
-	}
-	
-	/*---POPULAR---*/
-	
-	#popular{
-		clear: both;
-		border-bottom: 1px solid #CCC;
-		margin-bottom: 20px;	
-	}
-	
-	h3 {
-		font: 4em "Geometria Light";
-		padding: 10px 0px;
-		margin: 0px 0px 15px 0px;
-		border-bottom: 1px solid #CCC;
-	}
-	
-	article{
-		overflow: auto;
-		margin-bottom: 30px;
-		font-size: 1.2em;	
-	}
-	
-	article img{
-		float: left;
-		margin-right: 1.1111111%;
-	}
-	
-	article h4{
-		font: bold 2.5em "Geometria Light";
-		margin: 0;
-		border-bottom: 1px solid #CCC;	
-	}
-	
-	article p::first-line{
-		font-size: 1.2em;	
-	}
-	
-	article > p{
-		font-style: italic;	
-	}
-	
-	h4 + p{
-		color: #666;	
-	}
-	
-/*---MEDIA QUERIES---*/
-
-	/*---TABLET---*/
-	
-	@media screen and (max-width: 900px){
-		#container{
-			width: 100%;	
-		}
-		
-		#popular p{
-			padding-right: 2%;	
-		}
-		
-		nav ul{
-			word-spacing: 1.7em;	
-		}	
-	}
-	
-	/*---MOBILE---*/
-	
-	@media screen and (max-width: 639px){
-		header{
-			margin: 0px;
-		}
-		
-		header h1{
-			font-size:5.1em;	
-		}
-		
-		#quote{
-			display: none;	
-		}	
-		
-		nav{
-			margin: 0px;
-			padding: 0px;
-			border: none;
-		}
-		
-		nav li{
-			display: list-item;	
-			border-bottom: 1px solid #999;
-			padding: 10px;
-		}
-		
-		li:first-child{
-			border-top: 1px solid #999;;	
-		}
-		
-		ul{
-			padding: 0px;
-			list-style-type: none;	
-		}
-		
-		h4{
-			font-size: 2em!important;
-		}
-		
-		article p{
-			margin-top: 10px;	
-		}
-		
-		#intro{
-			padding-bottom: 0px;
-		}
-		
-		#container p, h4{
-			padding-left: 2.1111111%;
-			padding-right: 2.1111111%;
-			clear: both;
-		}
-		
-		h3{
-			padding-left: 1.1111111%;
-			font-size: 3em;	
-		}
-		
-		img{
-			width: 100%;	
-			margin-bottom: 10px;
-		}
-		
-				/*---NTH---*/
-
-			li:nth-child(odd){
-				background-color:#DFDFDF;	
-			}
-	}
+/*---CONTENT---*/
+.content{
+	position: relative;
+	z-index: 10;
+	background-color: #000;
+	padding: 30px 0;
+	min-height: 600px;
+	color: #FFF;
+}
